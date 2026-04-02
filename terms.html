@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="style.css" />
   <style>
     /* Same base styles as privacy page */
     :root {
@@ -251,20 +251,12 @@
         padding: 0 20px;
       }
     }
-  </style>
+  </style>  
 </head>
 <body>
 
-<header class="legal-header">
-  <a href="index.html" class="logo-link">
-    <div class="logo-icon">📏</div>
-    <span>My Screen Size</span>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">← Back to Tool</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</header>
+<!-- Header (loaded via JS) -->
+  <div id="header-root"></div>
 
 <main class="legal-main">
   <div class="container">
@@ -319,13 +311,13 @@
       <p>These Terms constitute the entire agreement between you and My Screen Size regarding the Service and supersede any prior agreements. If any provision of these Terms is found to be unenforceable, the remaining provisions shall remain in full force and effect.</p>
 
       <p style="margin-top: 28px;">By using My Screen Size, you acknowledge that you have read, understood, and agreed to these Terms of Use.</p>
-    </div>
-
-    <div class="footer-note">
-      <p>© 2026 My Screen Size — Free screen diagnostics tool.</p>
-    </div>
+    </div>    
   </div>
 </main>
+<!-- Footer (loaded via JS) -->
+  <div id="footer-root"></div>
 
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
 </body>
 </html>

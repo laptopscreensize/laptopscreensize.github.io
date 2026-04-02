@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080c18" />
+  <title>Privacy Policy | My Screen Size</title>
+  <meta name="description" content="Privacy Policy for My Screen Size — a screen resolution detection tool that respects your privacy. No tracking, no cookies, no data collection." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================
+       PRIVACY PAGE STYLES (mirror of main style.css)
+    =========================== */
+    :root {
+      --bg: #080c18;
+      --bg-2: #0d1325;
+      --bg-3: #111828;
+      --surface: #141d30;
+      --surface-2: #1a2540;
+      --border: rgba(99, 179, 255, 0.10);
+      --border-2: rgba(99, 179, 255, 0.20);
+      --text: #e8eef8;
+      --text-2: #8fa0bf;
+      --text-3: #5a6e8a;
+      --accent: #3b8fff;
+      --accent-2: #00e5c8;
+      --accent-3: #7c5cfc;
+      --radius: 16px;
+      --radius-sm: 8px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: rgba(59, 143, 255, 0.3);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header styling (inline for standalone privacy page) */
+    .legal-header {
+      background: rgba(8, 12, 24, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--text-2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* main content */
+    .legal-main {
+      padding: 100px 0 120px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      border: 1px solid rgba(0, 229, 200, 0.2);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+
+    .last-updated {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-3);
+      border-left: 3px solid var(--accent-2);
+      padding-left: 16px;
+      margin-bottom: 48px;
+    }
+
+    .legal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-bottom: 32px;
+      transition: border-color var(--transition);
+    }
+
+    .legal-card:hover {
+      border-color: var(--border-2);
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-2);
+      margin: 24px 0 12px 0;
+    }
+
+    p {
+      color: var(--text-2);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin: 1rem 0 1.5rem 1.8rem;
+      color: var(--text-2);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(59, 143, 255, 0.3);
+    }
+
+    a:hover {
+      color: var(--accent-2);
+      border-bottom-color: var(--accent-2);
+    }
+
+    .contact-email {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin: 28px 0 16px;
+      display: inline-block;
+    }
+
+    .footer-note {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-3);
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface-2);
+      color: var(--text);
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 32px;
+      transition: background var(--transition);
+    }
+
+    .btn-back:hover {
+      background: rgba(59, 143, 255, 0.15);
+      color: var(--accent-2);
+    }
+
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 24px;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .legal-header {
+        padding: 0 20px;
+      }
+      .nav-links {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="legal-header">
+  <a href="index.html" class="logo-link">
+    <div class="logo-icon">📺</div>
+    <span>My Screen Size</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">← Back to Tool</a>
+    <a href="terms.html">Terms of Use</a>
+  </div>
+</header>
+
+<main class="legal-main">
+  <div class="container">
+    <a href="index.html" class="btn-back">← Return to Screen Detector</a>
+    <div class="section-tag">Legal & Privacy</div>
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Last updated: April 2, 2026</div>
+
+    <div class="legal-card">
+      <p><strong>My Screen Size</strong> ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains that our screen size detection tool operates entirely within your browser and does not collect, store, or share any personal data.</p>
+
+      <h2>1. No Data Collection</h2>
+      <p>We do not collect any personally identifiable information (PII). The screen resolution, device type, pixel density, and other display metrics are calculated locally on your device using JavaScript browser APIs. These values are never transmitted to any server, database, or third party.</p>
+      <p>Your visit is completely anonymous. We do not use analytics scripts, tracking pixels, fingerprinting techniques, or session recording tools.</p>
+
+      <h2>2. No Cookies</h2>
+      <p>This website does not set any cookies, local storage entries, or any other persistent identifiers. No consent banners are required because no tracking occurs.</p>
+
+      <h2>3. Third-Party Services</h2>
+      <p>Our tool does not integrate with any third-party analytics, advertising networks, or social media plugins. The only external resources loaded are Google Fonts (for typography) which may record standard HTTP request data (like IP address) as described in Google's Privacy Policy. However, we do not control or have access to that data. We recommend reviewing Google's privacy policy for font services.</p>
+      <p>We do not use any CDN that tracks users. All detection logic is self-contained in static HTML, CSS, and JavaScript files hosted on GitHub Pages (or your hosting provider). The underlying hosting provider may collect standard server logs (IP address, date/time, requested pages) for security and performance purposes. Those logs are not accessible or used by us for user tracking.</p>
+
+      <h2>4. User-Provided Information</h2>
+      <p>The optional "Physical Size Estimator" allows you to manually enter your screen diagonal (in inches). This input stays inside your browser and is never transmitted. We do not store or access that value after you leave the page.</p>
+
+      <h2>5. Children's Privacy</h2>
+      <p>Our service is intended for general audiences and does not knowingly collect any information from children under 13. Since no data collection occurs, COPPA compliance is inherent.</p>
+
+      <h2>6. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy occasionally to reflect clarifications or legal requirements. Any changes will be posted on this page with an updated revision date. Continued use of the website constitutes acceptance of any revised policy.</p>
+
+      <h2>7. Contact Information</h2>
+      <p>If you have any questions or concerns about this Privacy Policy or our data practices, you can contact us at:</p>
+      <div class="contact-email">📧 aansawaqas50@gmail.com</div>
+      <p>We aim to respond within a reasonable timeframe.</p>
+
+      <h2>8. No Data Sale or Sharing</h2>
+      <p>We do not sell, rent, trade, or share any user information — simply because we don't collect any. Your screen resolution is yours alone.</p>
+    </div>
+
+    <div class="footer-note">
+      <p>© 2026 My Screen Size — Zero tracking, full transparency.</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

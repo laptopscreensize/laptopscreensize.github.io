@@ -8,31 +8,31 @@
     {
       title: 'Tools',
       links: [
-        { label: 'Screen Detector', href: '#detector' },
-        { label: 'Live Ruler', href: '#ruler' },
-        { label: 'Breakpoint Tester', href: '#breakpoints' },
-        { label: 'Display Capabilities', href: '#colorspace' },
-        { label: 'Size Comparison', href: '#compare' },
+        { label: 'Screen Detector', href: '/#detector' },
+        { label: 'Live Ruler', href: '/#ruler' },
+        { label: 'Breakpoint Tester', href: '/#breakpoints' },
+        { label: 'Display Capabilities', href: '/#colorspace' },
+        { label: 'Size Comparison', href: '/#compare' },
       ],
     },
     {
       title: 'Learn',
       links: [
-        { label: 'How It Works', href: '#how' },
-        { label: 'FAQ', href: '#faq' },
-        { label: 'Features', href: '#features' },
-        { label: 'What is DPI?', href: '#faq' },
-        { label: 'Screen Resolutions', href: '#compare' },
+        { label: 'How It Works', href: '/#how' },
+        { label: 'FAQ', href: '/#faq' },
+        { label: 'Features', href: '/#features' },
+        { label: 'What is DPI?', href: '/#faq' },
+        { label: 'Screen Resolutions', href: '/#compare' },
       ],
     },
     {
       title: 'Quick Facts',
       links: [
-        { label: '1080p = 1920×1080', href: '#compare' },
-        { label: '4K = 3840×2160', href: '#compare' },
-        { label: 'Retina = 2× DPI', href: '#faq' },
-        { label: '16:9 = Widescreen', href: '#faq' },
-        { label: 'PPI vs DPI', href: '#faq' },
+        { label: '1080p = 1920×1080', href: '/#compare' },
+        { label: '4K = 3840×2160', href: '/#compare' },
+        { label: 'Retina = 2× DPI', href: '/#faq' },
+        { label: '16:9 = Widescreen', href: '/#faq' },
+        { label: 'PPI vs DPI', href: '/#faq' },
       ],
     },
   ];
@@ -61,7 +61,7 @@
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <a href="#home" class="footer-logo" aria-label="My Screen Size">
+              <a href="/" class="footer-logo" aria-label="My Screen Size">
                 <div class="logo-icon" aria-hidden="true">⊡</div>
                 My Screen Size
               </a>
@@ -79,8 +79,8 @@
           <div class="footer-bottom">
             <p>© ${CURRENT_YEAR} My Screen Size · <span id="footer-res">—</span> detected</p>
             <div class="footer-bottom-links" role="list" aria-label="Legal links">
-              <a href="privacy" role="listitem">Privacy Policy</a>
-              <a href="terms" role="listitem">Terms</a>
+              <a href="/privacy" role="listitem">Privacy Policy</a>
+              <a href="/terms" role="listitem">Terms</a>
               <a href="/sitemap.xml" role="listitem">Sitemap</a>
             </div>
           </div>

@@ -79,9 +79,9 @@
           <div class="footer-bottom">
             <p>© ${CURRENT_YEAR} My Screen Size · <span id="footer-res">—</span> detected</p>
             <div class="footer-bottom-links" role="list" aria-label="Legal links">
-              <a href="#" role="listitem">Privacy Policy</a>
-              <a href="#" role="listitem">Terms</a>
-              <a href="#" role="listitem">Sitemap</a>
+              <a href="privacy" role="listitem">Privacy Policy</a>
+              <a href="terms" role="listitem">Terms</a>
+              <a href="/sitemap.xml" role="listitem">Sitemap</a>
             </div>
           </div>
         </div>

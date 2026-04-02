@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f1e" />
+
+  <!-- SEO Meta -->
+  <title>My Screen Size – Detect & Test Your Screen Resolution Online</title>
+  <meta name="description" content="Instantly detect your screen size, resolution, pixel density, aspect ratio, and device type. Free online tool for laptops, mobiles, tablets, and monitors." />
+  <meta name="keywords" content="screen size detector, screen resolution test, pixel density checker, display size tool, monitor resolution, laptop screen size, device screen test, DPI checker" />
+  <meta name="author" content="My Screen Size" />
+  <link rel="canonical" href="https://laptopscreensize.github.io/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://laptopscreensize.github.io/" />
+  <meta property="og:title" content="My Screen Size – Detect Your Screen Resolution Instantly" />
+  <meta property="og:description" content="Free tool to detect screen size, resolution, DPI, aspect ratio and device type for any device." />
+  <meta property="og:image" content="https://laptopscreensize.github.io/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Screen Size – Screen Resolution Detector" />
+  <meta name="twitter:description" content="Instantly detect your screen resolution, pixel density, and device info." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "My Screen Size",
+    "url": "https://laptopscreensize.github.io/",
+    "description": "Online tool to detect screen size, resolution, DPI, and device information.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Screen resolution detection",
+      "Pixel density (DPI/PPI) calculation",
+      "Aspect ratio detection",
+      "Device type identification",
+      "Color depth detection",
+      "Viewport size measurement"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I find my screen size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Visit My Screen Size and your screen resolution, dimensions, and device info are automatically detected and displayed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is screen DPI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DPI (dots per inch) or PPI (pixels per inch) measures pixel density. Higher DPI means sharper, clearer displays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is viewport size vs screen size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Screen size is your full display resolution. Viewport size is the visible browser area, which excludes toolbars and system UI."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header (loaded via JS) -->
+  <div id="header-root"></div>
+
+  <main>
+
+    <!-- SECTION 1: Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <canvas id="grid-canvas"></canvas>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge animate-in" style="--delay:0.1s">
+          <span class="badge-dot"></span> Live Detection Active
+        </div>
+        <h1 class="hero-title animate-in" style="--delay:0.2s">
+          Know Your<br /><span class="gradient-text">Screen Size</span>
+        </h1>
+        <p class="hero-subtitle animate-in" style="--delay:0.35s">
+          Instantly detect resolution, pixel density, aspect ratio,<br class="br-hide" /> and device type — no installs, no sign-up.
+        </p>
+        <div class="hero-cta animate-in" style="--delay:0.5s">
+          <a href="#detector" class="btn-primary">Detect My Screen</a>
+          <a href="#features" class="btn-ghost">Explore Features</a>
+        </div>
+        <div class="hero-quick-stats animate-in" style="--delay:0.65s">
+          <div class="qs-item">
+            <span class="qs-val" id="qs-res">—</span>
+            <span class="qs-label">Resolution</span>
+          </div>
+          <div class="qs-divider"></div>
+          <div class="qs-item">
+            <span class="qs-val" id="qs-dpi">—</span>
+            <span class="qs-label">DPI</span>
+          </div>
+          <div class="qs-divider"></div>
+          <div class="qs-item">
+            <span class="qs-val" id="qs-device">—</span>
+            <span class="qs-label">Device</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint animate-in" style="--delay:1s">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Main Detector Dashboard -->
+    <section class="detector" id="detector">
+      <div class="container">
+        <div class="section-tag">Core Tool</div>
+        <h2 class="section-title">Screen <span class="gradient-text">Analyzer</span></h2>
+        <p class="section-sub">Every metric about your display, calculated in real time.</p>
+
+        <div class="detector-grid">
+          <!-- Primary Card -->
+          <div class="det-card det-card--primary">
+            <div class="det-card__label">Screen Resolution</div>
+            <div class="det-card__value" id="d-resolution">Detecting…</div>
+            <div class="det-card__sub" id="d-resolution-sub"></div>
+            <div class="det-card__visual">
+              <div class="res-bar" id="res-bar-w"></div>
+              <div class="res-bar res-bar--h" id="res-bar-h"></div>
+            </div>
+          </div>
+
+          <!-- Metrics Grid -->
+          <div class="det-metrics">
+            <div class="met-card" id="mc-viewport">
+              <div class="met-icon">⊡</div>
+              <div class="met-info">
+                <div class="met-label">Viewport Size</div>
+                <div class="met-val" id="d-viewport">—</div>
+              </div>
+            </div>
+            <div class="met-card" id="mc-dpi">
+              <div class="met-icon">◉</div>
+              <div class="met-info">
+                <div class="met-label">Pixel Density</div>
+                <div class="met-val" id="d-dpi">—</div>
+              </div>
+            </div>
+            <div class="met-card" id="mc-ratio">
+              <div class="met-icon">▭</div>
+              <div class="met-info">
+                <div class="met-label">Aspect Ratio</div>
+                <div class="met-val" id="d-ratio">—</div>
+              </div>
+            </div>
+            <div class="met-card" id="mc-color">
+              <div class="met-icon">◈</div>
+              <div class="met-info">
+                <div class="met-label">Color Depth</div>
+                <div class="met-val" id="d-color">—</div>
+              </div>
+            </div>
+            <div class="met-card" id="mc-orient">
+              <div class="met-icon">⟳</div>
+              <div class="met-info">
+                <div class="met-label">Orientation</div>
+                <div class="met-val" id="d-orient">—</div>
+              </div>
+            </div>
+            <div class="met-card" id="mc-touch">
+              <div class="met-icon">◎</div>
+              <div class="met-info">
+                <div class="met-label">Touch Points</div>
+                <div class="met-val" id="d-touch">—</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Device Card -->
+          <div class="det-card det-card--device">
+            <div class="det-card__label">Device Profile</div>
+            <div class="device-icon-wrap">
+              <div class="device-icon" id="device-icon">💻</div>
+            </div>
+            <div class="det-card__value" id="d-device-type">—</div>
+            <div class="device-details">
+              <div class="dd-row"><span>OS</span><span id="d-os">—</span></div>
+              <div class="dd-row"><span>Browser</span><span id="d-browser">—</span></div>
+              <div class="dd-row"><span>Pixel Ratio</span><span id="d-pixratio">—</span></div>
+              <div class="dd-row"><span>HDR</span><span id="d-hdr">—</span></div>
+            </div>
+          </div>
+
+          <!-- Physical Size Estimator -->
+          <div class="det-card det-card--physical">
+            <div class="det-card__label">Physical Size Estimator</div>
+            <div class="physical-input-row">
+              <label>Enter diagonal (inches)</label>
+              <input type="number" id="phys-input" placeholder="e.g. 15.6" min="1" max="120" />
+              <button class="btn-small" id="phys-calc">Calculate</button>
+            </div>
+            <div class="physical-results" id="phys-results">
+              <div class="pr-row"><span>Width</span><span id="pr-w">—</span></div>
+              <div class="pr-row"><span>Height</span><span id="pr-h">—</span></div>
+              <div class="pr-row"><span>PPI</span><span id="pr-ppi">—</span></div>
+              <div class="pr-row"><span>Total Pixels</span><span id="pr-total">—</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copy-bar">
+          <span id="copy-text">1920 × 1080 | 96 DPI | 16:9 | Desktop</span>
+          <button class="btn-copy" id="copy-btn" title="Copy to clipboard">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            Copy All Stats
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Live Viewport Ruler -->
+    <section class="ruler-section" id="ruler">
+      <div class="container">
+        <div class="section-tag">Interactive</div>
+        <h2 class="section-title">Viewport <span class="gradient-text">Ruler</span></h2>
+        <p class="section-sub">Drag or resize your window to see live measurements update.</p>
+        <div class="ruler-wrap">
+          <div class="ruler-h" id="ruler-h">
+            <div class="ruler-label-h" id="ruler-label-h">0px</div>
+          </div>
+          <div class="ruler-v" id="ruler-v">
+            <div class="ruler-label-v" id="ruler-label-v">0px</div>
+          </div>
+          <div class="ruler-area" id="ruler-area">
+            <div class="ruler-crosshair" id="ruler-crosshair"></div>
+            <div class="ruler-dims" id="ruler-dims">— × —</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Breakpoint Tester -->
+    <section class="breakpoints" id="breakpoints">
+      <div class="container">
+        <div class="section-tag">Responsive Design</div>
+        <h2 class="section-title">Breakpoint <span class="gradient-text">Tester</span></h2>
+        <p class="section-sub">See which CSS media query breakpoints your device matches right now.</p>
+        <div class="bp-grid" id="bp-grid"></div>
+        <div class="bp-current">
+          Current: <strong id="bp-current-label">Detecting…</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Color Space -->
+    <section class="colorspace" id="colorspace">
+      <div class="container">
+        <div class="section-tag">Display Quality</div>
+        <h2 class="section-title">Display <span class="gradient-text">Capabilities</span></h2>
+        <p class="section-sub">Advanced display features and color space support detected from your hardware.</p>
+        <div class="cs-grid" id="cs-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Screen Size Comparison -->
+    <section class="comparison" id="compare">
+      <div class="container">
+        <div class="section-tag">Reference Guide</div>
+        <h2 class="section-title">Screen Size <span class="gradient-text">Comparison</span></h2>
+        <p class="section-sub">See how common screen sizes compare. Your screen is highlighted.</p>
+        <div class="compare-grid" id="compare-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: How It Works -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-tag">Process</div>
+        <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+        <p class="section-sub">Zero servers. Zero tracking. All detection runs locally in your browser.</p>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="how-num">01</div>
+            <div class="how-content">
+              <h3>Browser API Access</h3>
+              <p>We query the browser's native <code>screen</code>, <code>window</code>, and <code>navigator</code> APIs — no permissions needed, no data sent anywhere.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-num">02</div>
+            <div class="how-content">
+              <h3>Real-time Calculation</h3>
+              <p>Aspect ratios, pixel density, physical dimensions, and breakpoints are calculated on the fly using mathematical formulas.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-num">03</div>
+            <div class="how-content">
+              <h3>Live Updates</h3>
+              <p>Resize your window, rotate your device, or change resolution — all values update instantly via event listeners.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-num">04</div>
+            <div class="how-content">
+              <h3>Private by Design</h3>
+              <p>Everything stays on your device. No analytics, no fingerprinting, no cookies. Your data never leaves your browser.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-tag">Knowledge Base</div>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <div class="faq-list" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: Features Overview -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-tag">Capabilities</div>
+        <h2 class="section-title">Everything You <span class="gradient-text">Need</span></h2>
+        <p class="section-sub">A complete suite of display diagnostics, all in one page.</p>
+        <div class="feat-grid">
+          <div class="feat-card">
+            <div class="feat-icon">⚡</div>
+            <h3>Instant Detection</h3>
+            <p>Results appear the moment you load the page. No button clicks required.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">📐</div>
+            <h3>Physical Size Calc</h3>
+            <p>Enter your diagonal screen size and we calculate exact physical width, height, and PPI.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">📱</div>
+            <h3>All Devices</h3>
+            <p>Works on laptops, phones, tablets, desktops, TVs, and any web-enabled display.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🎨</div>
+            <h3>Color Space</h3>
+            <p>Detects HDR, P3 wide gamut, sRGB, and other color capabilities your monitor supports.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">📏</div>
+            <h3>Live Ruler</h3>
+            <p>Interactive pixel ruler that updates in real time as you resize your browser.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🔍</div>
+            <h3>Breakpoint Map</h3>
+            <p>Visual grid showing all CSS breakpoints and which one your device currently hits.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🔒</div>
+            <h3>100% Private</h3>
+            <p>No tracking, no cookies, no data collection. Everything runs locally in your browser.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">📋</div>
+            <h3>Copy & Share</h3>
+            <p>Copy your complete screen stats to clipboard in one click for easy sharing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (loaded via JS) -->
+  <div id="footer-root"></div>
+
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

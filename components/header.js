@@ -5,12 +5,12 @@
 
 (function () {
   const NAV_LINKS = [
-    { label: 'Detector', href: '#detector' },
-    { label: 'Ruler', href: '#ruler' },
-    { label: 'Breakpoints', href: '#breakpoints' },
-    { label: 'Display', href: '#colorspace' },
-    { label: 'Compare', href: '#compare' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Detector', href: '/#detector' },
+    { label: 'Ruler', href: '/#ruler' },
+    { label: 'Breakpoints', href: '/#breakpoints' },
+    { label: 'Display', href: '/#colorspace' },
+    { label: 'Compare', href: '/#compare' },
+    { label: 'FAQ', href: '/#faq' },
   ];
 
   function renderHeader() {
@@ -30,7 +30,7 @@
 
     root.innerHTML = `
       <header id="site-header" role="banner" aria-label="Site header">
-        <a href="#home" class="header-logo" aria-label="My Screen Size Home">
+        <a href="/" class="header-logo" aria-label="My Screen Size Home">
           <div class="logo-icon" aria-hidden="true">⊡</div>
           My Screen Size
         </a>

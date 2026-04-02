@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080c18" />
+  <title>Terms of Use | My Screen Size</title>
+  <meta name="description" content="Terms of Use for My Screen Size — a free screen resolution detection tool. Learn about acceptable use, disclaimers, and liability." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Same base styles as privacy page */
+    :root {
+      --bg: #080c18;
+      --bg-2: #0d1325;
+      --bg-3: #111828;
+      --surface: #141d30;
+      --surface-2: #1a2540;
+      --border: rgba(99, 179, 255, 0.10);
+      --border-2: rgba(99, 179, 255, 0.20);
+      --text: #e8eef8;
+      --text-2: #8fa0bf;
+      --text-3: #5a6e8a;
+      --accent: #3b8fff;
+      --accent-2: #00e5c8;
+      --accent-3: #7c5cfc;
+      --radius: 16px;
+      --radius-sm: 8px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    ::selection {
+      background: rgba(59, 143, 255, 0.3);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .legal-header {
+      background: rgba(8, 12, 24, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--text-2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .legal-main {
+      padding: 100px 0 120px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      border: 1px solid rgba(0, 229, 200, 0.2);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+
+    .last-updated {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-3);
+      border-left: 3px solid var(--accent-2);
+      padding-left: 16px;
+      margin-bottom: 48px;
+    }
+
+    .legal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-bottom: 32px;
+    }
+
+    .legal-card:hover {
+      border-color: var(--border-2);
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-2);
+      margin: 24px 0 12px 0;
+    }
+
+    p {
+      color: var(--text-2);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      margin: 1rem 0 1.5rem 1.8rem;
+      color: var(--text-2);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(59, 143, 255, 0.3);
+    }
+
+    a:hover {
+      color: var(--accent-2);
+    }
+
+    .contact-email {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin: 28px 0 16px;
+      display: inline-block;
+    }
+
+    .footer-note {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-3);
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface-2);
+      color: var(--text);
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 32px;
+      transition: background var(--transition);
+    }
+
+    .btn-back:hover {
+      background: rgba(59, 143, 255, 0.15);
+      color: var(--accent-2);
+    }
+
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 24px;
+      }
+      .legal-header {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="legal-header">
+  <a href="index.html" class="logo-link">
+    <div class="logo-icon">📏</div>
+    <span>My Screen Size</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">← Back to Tool</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</header>
+
+<main class="legal-main">
+  <div class="container">
+    <a href="index.html" class="btn-back">← Return to Screen Detector</a>
+    <div class="section-tag">Legal Agreement</div>
+    <h1>Terms of Use</h1>
+    <div class="last-updated">Effective date: April 2, 2026</div>
+
+    <div class="legal-card">
+      <p>Welcome to <strong>My Screen Size</strong> ("we", "our", or "us"). By accessing or using the website located at <strong>https://laptopscreensize.github.io/</strong> (the "Service"), you agree to be bound by these Terms of Use. If you disagree with any part of these terms, please do not use our Service.</p>
+
+      <h2>1. Description of Service</h2>
+      <p>My Screen Size provides a free, browser-based tool that detects and displays your device's screen resolution, viewport size, pixel density (DPI), aspect ratio, device type, color depth, and other display-related information. All processing occurs locally on your device using JavaScript APIs. No data is transmitted to our servers.</p>
+
+      <h2>2. Acceptable Use</h2>
+      <p>You agree to use the Service only for lawful purposes and in a manner consistent with these Terms. You may not:</p>
+      <ul>
+        <li>Use the Service in any way that could damage, disable, overburden, or impair the website or interfere with any other party's use.</li>
+        <li>Attempt to reverse engineer, decompile, or extract the source code of our detection scripts (though the code is openly visible as static front-end assets).</li>
+        <li>Use automated systems (bots, scrapers) to access the Service for any purpose without explicit permission.</li>
+        <li>Misrepresent your affiliation with My Screen Size or use our branding without consent.</li>
+      </ul>
+
+      <h2>3. Intellectual Property</h2>
+      <p>All content, design, graphics, typography, and custom code (excluding open-source libraries) are owned by My Screen Size and protected by copyright laws. You may view, download, and print pages for personal, non-commercial reference. You may not republish, distribute, or reproduce substantial portions of our website without prior written permission. However, you are free to link to our tool.</p>
+
+      <h2>4. Disclaimer of Warranties</h2>
+      <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. We make no representations or warranties of any kind, express or implied, regarding the accuracy, reliability, or availability of the Service. Screen size calculations (especially physical size estimation) are approximations based on user-provided inputs and standard mathematical formulas; actual physical dimensions may vary due to manufacturing differences. The tool is intended for informational and entertainment purposes only — not for precision engineering or medical display calibration.</p>
+      <p>We do not warrant that the Service will be uninterrupted, error-free, or free of harmful components. Your use is at your sole risk.</p>
+
+      <h2>5. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, My Screen Size, its owners, contributors, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation loss of data, revenue, or profits, arising out of or in connection with your use or inability to use the Service, even if advised of the possibility of such damages. In no event shall our total liability exceed one hundred US dollars ($100).</p>
+
+      <h2>6. External Links & Third Parties</h2>
+      <p>Our website may contain links to third-party websites (e.g., GitHub Pages infrastructure, Google Fonts). We are not responsible for the content, privacy policies, or practices of any third-party sites. You acknowledge that you access those services at your own risk.</p>
+
+      <h2>7. Modifications to Terms</h2>
+      <p>We reserve the right to revise these Terms of Use at any time without prior notice. The latest version will be posted on this page with an updated effective date. Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
+
+      <h2>8. Termination</h2>
+      <p>We may suspend or terminate your access to the Service at our sole discretion, without notice, for conduct that violates these Terms or is harmful to other users or our platform. Since no user accounts exist, termination simply means you may be blocked from accessing the site (though we rarely exercise this).</p>
+
+      <h2>9. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of Pakistan, without regard to its conflict of law provisions. Any legal action arising from these Terms shall be brought exclusively in the courts located in Pakistan.</p>
+
+      <h2>10. Contact Information</h2>
+      <p>For any questions regarding these Terms of Use, please contact us at:</p>
+      <div class="contact-email">✉️ aansawaqas50@gmail.com</div>
+      <p>We will make reasonable efforts to respond to inquiries within 5-7 business days.</p>
+
+      <h2>11. Entire Agreement</h2>
+      <p>These Terms constitute the entire agreement between you and My Screen Size regarding the Service and supersede any prior agreements. If any provision of these Terms is found to be unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+      <p style="margin-top: 28px;">By using My Screen Size, you acknowledge that you have read, understood, and agreed to these Terms of Use.</p>
+    </div>
+
+    <div class="footer-note">
+      <p>© 2026 My Screen Size — Free screen diagnostics tool.</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

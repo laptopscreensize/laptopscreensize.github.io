@@ -266,19 +266,12 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="legal-header">
-  <a href="index.html" class="logo-link">
-    <div class="logo-icon">📺</div>
-    <span>My Screen Size</span>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">← Back to Tool</a>
-    <a href="terms.html">Terms of Use</a>
-  </div>
-</header>
+<!-- Header (loaded via JS) -->
+  <div id="header-root"></div>
 
 <main class="legal-main">
   <div class="container">
@@ -317,13 +310,13 @@
 
       <h2>8. No Data Sale or Sharing</h2>
       <p>We do not sell, rent, trade, or share any user information — simply because we don't collect any. Your screen resolution is yours alone.</p>
-    </div>
-
-    <div class="footer-note">
-      <p>© 2026 My Screen Size — Zero tracking, full transparency.</p>
-    </div>
+    </div>    
   </div>
 </main>
+<!-- Footer (loaded via JS) -->
+  <div id="footer-root"></div>
 
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
 </body>
 </html>

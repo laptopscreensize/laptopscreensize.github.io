@@ -63,7 +63,7 @@
             <div class="footer-brand">
               <a href="/" class="footer-logo" aria-label="My Screen Size">
                 <div class="logo-icon" aria-hidden="true">⊡</div>
-                My Screen Size
+                My Screen Resolution
               </a>
               <p>
                 The fastest, most accurate screen size detector on the web.

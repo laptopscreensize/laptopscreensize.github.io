@@ -32,7 +32,7 @@
       <header id="site-header" role="banner" aria-label="Site header">
         <a href="/" class="header-logo" aria-label="My Screen Size Home">
           <div class="logo-icon" aria-hidden="true">⊡</div>
-          My Screen Size
+          My Screen Resolution
         </a>
 
         <nav aria-label="Main navigation">

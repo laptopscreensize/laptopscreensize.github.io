@@ -21,8 +21,8 @@
         { label: 'How It Works', href: '/#how' },
         { label: 'FAQ', href: '/#faq' },
         { label: 'Features', href: '/#features' },
-        { label: 'What is DPI?', href: '/#faq' },
-        { label: 'Screen Resolutions', href: '/#compare' },
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: '/contact' },
       ],
     },
     {

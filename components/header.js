@@ -11,6 +11,7 @@
     { label: 'Display', href: '/#colorspace' },
     { label: 'Compare', href: '/#compare' },
     { label: 'FAQ', href: '/#faq' },
+    { label: 'About', href: '/about' },
   ];
 
   function renderHeader() {
